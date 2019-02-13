@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "ws": "^6.0.0"
+  }
+}
