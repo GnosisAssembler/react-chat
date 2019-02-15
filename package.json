@@ -1,8 +1,20 @@
 {
+  "name": "react-chat",
+  "version": "1.0.0",
+  "description": "A simple react chat app",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "client-install": "cd client && npm install",
+    "client": "cd client && npm start",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
+  "author": "Panos karyp",
+  "license": "MIT",
   "dependencies": {
+    "concurrently": "^4.1.0",
     "ws": "^6.0.0"
   }
 }
